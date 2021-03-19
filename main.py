@@ -7,7 +7,7 @@ from tensorflow.keras.models import load_model
 #import tkinter as tk
 
 # ベストプレイヤーのモデルの読み込み
-model = load_model('./model/best.h5')
+#model = load_model('./model/best.h5')
 
 # ゲームUIの定義
 #class GameUI(tk.Frame):
