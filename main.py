@@ -99,11 +99,15 @@ class GameUI(tk.Frame):
 
 
 # ゲームUIの実行
-f = GameUI(model=model)
-f.pack()
-f.mainloop()
+#f = GameUI(model=model)
+#f.pack()
+#f.mainloop()
 
+def run():
+    print("Helloooooooooooooooooo")
 
+if __name__ == '__main__':
+    run()
 
 
 
