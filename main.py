@@ -4,7 +4,6 @@ from pv_mcts import pv_mcts_action
 from tensorflow.keras.models import load_model
 
 import tensorflow as tf
-import multiprocessing as mp
 from flask import Flask
 #from pathlib import Path
 #from threading import Thread
@@ -107,20 +106,13 @@ from flask import Flask
 #f.pack()
 #f.mainloop()
 
-app = Flask(__name__) 
+app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
-    core_num = mp.cpu_count()
-    config = tf.ConfigProto(
-        inter_op_parallelism_threads=core_num,
-        intra_op_parallelism_threads=core_num )
-    sess = tf.Session(config=config)
-
-    hello = tf.constant('hello, tensorflow!')
-    return sess.run(hello)
+def main():
+    return "Hello world!"
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, host="0.0.0.0", port="8000")
 
 
